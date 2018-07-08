@@ -25,6 +25,8 @@
 .car_item_title{
     padding:10px 10px 10px 0;
     font-size: 14px;
+    height: 30px;
+    overflow: hidden;
 }
 .car_item_bot{
     padding:0px 10px 0px 0px;

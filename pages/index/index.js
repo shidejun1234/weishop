@@ -61,28 +61,6 @@ Page({
                 "movieImage": "../../image/huaju.jpeg"
             },
         ],
-        goodsList: [{
-                goodsId: 1,
-                goodsName: "木村耀司登山旅行大学生户外情侣双肩背包外带小背包",
-                goodsImage: "../../image/test.jpg",
-                goodsAddress: "广州",
-                goodsPrice: "1111.00"
-            },
-            {
-                goodsId: 1,
-                goodsName: "木村耀司登山旅行大学生户外情侣双肩背包外带小背包2",
-                goodsImage: "../../image/test.jpg",
-                goodsAddress: "广州",
-                goodsPrice: "1111.00"
-            },
-            {
-                goodsId: 1,
-                goodsName: "木村耀司登山旅行大学生户外情侣双肩背包外带小背包3",
-                goodsImage: "../../image/test.jpg",
-                goodsAddress: "广州",
-                goodsPrice: "1111.00"
-            }
-        ]
 
     },
 
@@ -92,7 +70,7 @@ Page({
     onLoad: function(options) {
         var that = this;
         wx.request({
-            url: 'http://localhost/weiphp/index.php?s=/w16/ShopCms/ShopCms/getGoodsList', //仅为示例，并非真实的接口地址
+          url: 'http://localhost/weiphp4.0-master/index.php?s=/w16/ShopCms/ShopCms/getGoodsList', //仅为示例，并非真实的接口地址
             header: {
                 'content-type': 'application/json'
             },
