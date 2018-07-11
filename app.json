@@ -3,6 +3,7 @@
         "pages/index/index",
         "pages/car/car",
         "pages/spdetail/spdetail",
+        "pages/request-payment/request-payment",
         "pages/my/my",
         "pages/pay/pay",
         "pages/gouwu/gouwu",

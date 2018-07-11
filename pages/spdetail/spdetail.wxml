@@ -1,5 +1,5 @@
 <!--pages/spdetail/spdetail.wxml-->
-<!-- <import src="../../wxParse/wxParse.wxml"/> -->
+ <import src="../../wxParse/wxParse.wxml"/> 
 <!-- 轮播图 ctrl+/ -->
 <view class="page-body">
     <view class="page-section page-section-spacing swiper">
@@ -80,9 +80,9 @@
 <view class='goods_detail'>
     <view class='goods_detail_title'>商品详情</view>
     <view>
-         <image src='{{goods[0].goodsImage}}' bindload='cusImageLoad' style='height:{{imageHeight}};width:{{imageWidth}};'></image> 
+         <!-- <image src='{{goods[0].goodsImage}}' bindload='cusImageLoad' style='height:{{imageHeight}};width:{{imageWidth}};'></image>  -->
       <!-- {{goods[0].goodsImage}}   -->
-     
+     <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
      <!-- <template is="wxParse" data="{{wxParseData:goods[0].goodsDetails}}"/>  -->
     </view>
 </view>

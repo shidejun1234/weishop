@@ -1,6 +1,6 @@
 // pages/spdetail/spdetail.js
 var WxAutoImage = require("../../js/detailImage.js");
-// var WxParse = require('../../wxParse/wxParse.js');
+var WxParse = require('../../wxParse/wxParse.js');
 Page({
 
     /**
@@ -54,7 +54,7 @@ Page({
         console.log(options.goods_id);
         var that = this;
         wx.request({
-            url: 'http://localhost/weiphp/index.php?s=/w16/ShopCms/ShopCms/getGoodsId', //仅为示例，并非真实的接口地址
+          url: 'http://localhost/weiphp4.0-master/index.php?s=/w16/ShopCms/ShopCms/getGoodsId', //仅为示例，并非真实的接口地址
             data: {
                 id: options.goods_id
             },
@@ -62,13 +62,16 @@ Page({
                 'content-type': 'application/json' // 默认值
             },
             success: function (res) {
-                console.log(res.data);
+              console.log(1);
+              console.log(res.data.data[0].goodsDetails);
 
                 // WxParse.wxParse('goods[0].goodsDetails', 'html', res.data.data, that, 5);
                 that.setData({
                     goods: res.data.data,
                     num: wx.getStorageSync("GoodsCarList").length
                 })
+                var article=res.data.data
+                WxParse.wxParse('article', 'html', res.data.data[0].goodsDetails,that,5);
             }
         })
 
